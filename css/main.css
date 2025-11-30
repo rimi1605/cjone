@@ -1,0 +1,777 @@
+@charset "utf-8";
+/* article */
+article{
+    height: 550px;
+    background: #ff0;
+}
+article .visual{
+    /* 화면상에 보여지는 크기 */
+    max-width: 1920px;
+    /* 최대너비 */
+    min-width: 1024px;
+    /*  최소너비 */
+    height: 100%;
+    overflow: hidden;
+    position: relative;/*control의 기준*/
+}
+article .visual ul.slide{
+    /* 이미지들이 들어가는 전체크기 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9600px;
+    /* 1920*5 */
+    height: 550px;
+    /* transition: all .8s; */
+}
+article .visual ul.slide li.item{
+    /* 하나의 요소 */
+    float: left;
+    width: 1920px;
+    height: 550px;
+    position: relative;/*txt의 기준*/
+}
+article .visual ul.slide li.item .txt{
+    position: absolute;
+    width: 1020px;
+    left: 50%; 
+     transform: translateX(-50%);
+    /* margin-left: 450px; */
+
+    top: 100px;z-index: 2;
+    color: #000;
+}
+article .visual ul.slide li.item .txt .s_tit{
+    width: 650px;
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 600;
+}
+article .visual ul.slide li.item .txt .s_tits{
+    width: 550px;
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 26px;
+}
+article .visual ul.slide li.item .txt .s_btn{
+    display: block;
+    width: 128px;
+    height: 38px;
+    line-height: 37px;
+    margin: 15px 0;
+    padding: 0 15px;
+    border: 1px solid #000;
+    text-align: center;
+    color: #000;
+    transition: all .3s;
+}
+article .visual ul.slide li.item .txt .s_btn:hover{
+    background-color: rgba(255,255,255,.3);
+    border-color: transparent;
+}
+article .visual ul.slide li.item .img{
+    position: absolute;
+    z-index: 1;
+    left: 0; top: 0;    
+}
+article .visual .control{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    z-index: 3;
+    text-align: center;
+    left: 0;
+    bottom: 30px;
+}
+article .visual .arrow a{
+    position: absolute;
+    bottom: 220px;
+    width: 25px;
+    height: 50px;
+    z-index: 3;   
+}
+article .visual .arrow a.prev{
+    left: 20px;
+    background: url(../images24/btn_banner_black.png) no-repeat -10px 0;
+}
+article .visual .arrow a.next{
+    right: 20px;
+    background: url(../images24/btn_banner_black.png) no-repeat -57px 0;
+}
+.control .auto{
+    display: inline-block;
+    height: 20px;
+    position: relative;
+}
+.control .auto a{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+}
+.control .auto a.play{
+    background: url(../images24/btn_banner_black.png) no-repeat -107px -5px;
+    display: none;
+}
+.control .auto a.pause{
+    background: url(../images24/btn_banner_black.png) no-repeat -107px -35px;
+}
+.control ul.paging{
+    display: inline-block;
+    padding-left: 30px;
+    vertical-align: top;
+}
+.control ul.paging li{
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    background: url(../images24/btn_banner_black.png) no-repeat -137px -9px;
+    margin-right: 10px;
+}
+.control ul.paging li.on{
+    background: url(../images24/btn_banner_black.png) no-repeat -137px -39px;
+}
+.text-indent{
+    text-indent: -99999px;
+}
+/* quick_wrap */
+.quick_wrap{
+    width: 1060px;
+    /* width, max-width, min-width */
+    /* height: 175px;고정된 높이 */
+    min-height: 175px;
+    /* height, max-height, min-height */
+    padding: 16px 0 40px;
+    margin: auto;
+}
+.quick_wrap .quick_list{
+    /* height: ; */
+    min-height: 183px;
+    /* background: #f09; */
+    width: 265px;   
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.quick_list .ani{
+    position: relative;
+    /* 스크립트트를 이용한 기준 */
+    width: 150px;
+    height: 130px;
+    margin: 0 auto;
+    background: url(../images24/quick01_00019.png) no-repeat left top;
+}
+.quick_list:nth-child(2) .ani{
+    background-image: url(../images24/quick02_00019.png);
+}
+.quick_list:nth-child(3) .ani{
+    background-image: url(../images24/quick03_00019.png);
+}
+.quick_list:nth-child(4) .ani{
+    background-image: url(../images24/quick04_00019.png);
+}
+.quick_list dt{
+    font-size: 18px;
+    color: #222;
+}
+.quick_list dd{
+    padding-top: 7px;
+    color: #555;
+    font-size: 14px;
+}
+.quick_list .line{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 1px;
+    height: 151px;
+    background: #ddd;
+}
+/* #section2 */
+#section2{
+    width: 100%;
+    height: 1914px;
+    background: url(../images24/bg_hotcontent.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 75px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+#section2 .tit{
+    margin-bottom: 70px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 600;
+}
+#section2 .back span{
+    position: absolute;
+    width: 100%; height: 100%;
+    background: url(../images24/bg_circle01.png) no-repeat 100px 50%/135px;
+    background-attachment: fixed;
+    opacity: .5;
+    z-index: 0;
+}
+#section2 .back span:nth-child(2){
+    background-image: url(../images24/bg_circle02.png);
+    background-position: 50% 50%;
+    background-size: 162px;
+}
+#section2 .back span:nth-child(3){
+    background-image: url(../images24/bg_circle03.png);
+    background-position: 100% 50%;
+    background-size: 119px;
+}
+#section2 .back span:nth-child(4){
+    background-image: url(../images24/bg_circle04.png);
+    background-position: 100% 100%;
+    background-size: 206px;
+}
+#section2 .cgv{
+    width: 1060px;
+    margin: 0 auto;
+    height: 638px;
+}
+#section2 .cgvTop{
+    height: 54px;
+    margin-bottom: 25px;
+    position: relative;
+}
+#section2 .cgvTop h3{
+    height: 24px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+#section2 .cgvTop p{
+    color: #888;
+    height: 20px;
+    font-size: 20px;
+}
+#section2 .cgvTop .more{
+    position: absolute;
+    padding: 0 16px;
+    height: 30px;
+    line-height: 29px;
+    border: 1px solid #555;
+    color: #555;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+#section2 .cgvCont{
+    height: 459px;
+    margin-bottom: 100px;
+}
+#section2 .cgvCont li{
+    float: left;
+}
+#section2 .cgvCont li a{
+    display: block;
+    width: 250px;
+    height: 459px;
+    color: #222;
+    margin-right: 20px;
+    position: relative;
+}
+#section2 .cgvCont li:last-child a{
+    margin-right: 0;
+}
+#section2 .cgvCont li a .img{
+    width: 250px;
+    height: 356px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+#section2 .cgvCont li a .img:after{
+    content: "";
+    width: 250px; 
+    height: 356px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .5s;
+    z-index: 10;
+}
+#section2 .cgvCont li:hover a .img:after{
+    opacity: 1;
+}
+#section2 .cgvCont li a .rank{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    left: 0; top: 0;
+    background: #cf1c3c;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#section2 .cgvCont li a .thum{
+    display: none;
+    position: absolute;
+    height: 30px;
+    line-height: 29px;
+    font-size: 14px;
+    top: 163px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 16px;
+    background: #fff;
+    border-radius: 3px;
+    color: #222;
+    text-align: center;
+    z-index: 10;
+}
+#section2 .cgvCont li a .thum span{
+    background: url(../images24/ico_out_link04.png) no-repeat right center;
+    padding-right: 20px;
+}
+#section2 .cgvCont li:hover a .thum{
+    display: block;
+}
+#section2 .cgvCont li a .txt{
+    height: 103px;
+}
+
+#section2 .cgvCont li a .txtT{
+    height: 52px;
+    margin-bottom: 10px;
+}
+#section2 .cgvCont li a .txtT span:first-child{
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: 4px 4px 0 0;
+    border-radius: 50%;
+    color: #ee6900;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #ee6900;
+    line-height: 18px;
+    vertical-align: middle;
+}
+#section2 .cgvCont li:last-child a .txtT span:first-child{
+    border-color: #006cc7;
+    color: #006cc7
+}
+#section2 .cgvCont li a .txtT span:last-child{
+    color: #222;
+    font-size:16px;
+}
+#section2 .cgvCont li a .star{
+    height: 24px;
+    font-size: 14px;
+    color: #888;    
+}
+#section2 .cgvCont li a .star span:first-child{
+    margin-right: 18px;
+    vertical-align: top;
+}
+#section2 .cgvCont li a .star span:first-child:after{
+    content: "|";
+    margin-left: 9px;
+    color: #888;
+}
+#section2 .cgvCont li a .star span:last-child{
+    display: inline-block;
+    width: 101px;
+    height: 17px;
+    background: url(../images24/ico_movie.png) no-repeat 0 -55px;
+    position: relative;
+}
+#section2 .cgvCont li:nth-child(2) a .star span:last-child:after,
+#section2 .cgvCont li:nth-child(4) a .star span:last-child:after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 17px;
+    background: url(../images24/ico_movie.png) no-repeat 0 -36px;
+    left: 0; top: 0;
+    z-index: 10;
+}
+/* cjm */
+#section2 .cjm{
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 532px;
+}
+.cjmTop{
+    height: 54px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.cjmTop h3{
+    height: 24px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.cjmTop p{
+    color: #888;
+    height: 20px;
+    font-size: 20px;
+}
+.cjmTop .more{
+    position: absolute;
+    padding: 0 16px;
+    height: 30px;
+    line-height: 29px;
+    border: 1px solid #555;
+    color: #555;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+.cjmCont{
+    height: 353px;
+    margin-bottom: 100px;
+}
+.cjmCont li{
+    float: left;
+}
+.cjmCont li a{
+    display: block;
+    width: 250px;
+    height: 353px;
+    color: #222;
+    margin-right: 20px;
+    position: relative;
+}
+.cjmCont li:last-child a{
+    margin-right: 0;
+}
+.cjmCont li a .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.cjmCont li a .img:after{
+    content: "";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 10px;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all .5s;
+    z-index: 10;
+}
+.cjmCont li:hover a .img:after{
+    opacity: 1;
+}
+.cjmCont .txt{
+    height: 103px;
+}
+.cjmCont .txtT{
+    height: 52px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222;
+    letter-spacing: -1px;
+}
+.cjmCont .price{
+    height: 20px;
+    font-size: 12px;
+    color: #888;
+}
+.cjmCont .price span:first-child{
+    text-decoration: line-through;
+    margin-right: 18px;
+}
+.cjmCont .price span:last-child{
+    font-size: 14px;
+    color: #ee6900;
+}
+/* cjm=thum */
+.cjmCont li a .thum{
+     display: none;
+    position: absolute;
+    height: 30px;
+    line-height: 29px;
+    font-size: 14px;
+    top: 113px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 16px;
+    background: #fff;
+    border-radius: 3px;
+    color: #222;
+    text-align: center;
+    z-index: 10;
+}
+.cjmCont li a .thum span{
+    background: url(../images24/ico_out_link04.png) no-repeat right center;
+    padding-right: 20px;
+}
+.cjmCont li:hover a .thum{
+    display: block;
+}
+/* cjon */
+#section2 .cjon{
+    max-width: 1060px;
+    margin: 0 auto;
+    height: 532px;
+}
+.cjonTop{
+    height: 54px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.cjonTop h3{
+    height: 24px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+.cjonTop p{
+    color: #888;
+    height: 20px;
+    font-size: 20px;
+}
+.cjonTop .more{
+    position: absolute;
+    padding: 0 16px;
+    height: 30px;
+    line-height: 29px;
+    border: 1px solid #555;
+    color: #555;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+}
+.cjonCont{
+    height: 353px;
+    margin-bottom: 100px;
+}
+.cjonCont li{
+    float: left;
+}
+.cjonCont li a{
+    display: block;
+    width: 250px;
+    height: 353px;
+    color: #222;
+    margin-right: 20px;
+    position: relative;
+}
+.cjonCont li:last-child a{
+    margin-right: 0;
+}
+.cjonCont li a .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.cjonCont li a .img:after{
+    content: "";
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 10px;
+    left: 0; top: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: all .5s;
+    z-index: 10;
+}
+.cjonCont li:hover a .img:after{
+    opacity: 1;
+}
+.cjonCont .txt{
+    height: 103px;
+}
+.cjonCont .txtT{
+    height: 52px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222;
+    letter-spacing: -1px;
+}
+.cjonCont .price{
+    height: 20px;
+    font-size: 12px;
+    color: #888;
+}
+.cjonCont .price span:first-child{
+    text-decoration: line-through;
+    margin-right: 18px;
+}
+.cjonCont .price span:last-child{
+    font-size: 14px;
+    color: #ee6900;
+}
+.cjonCont li:nth-child(2) .price span:first-child,
+.cjonCont li:nth-child(4) .price span:first-child{
+    display: none;
+}
+/* .cjon-thum */
+.cjonCont li a .thum{
+     display: none;
+    position: absolute;
+    height: 30px;
+    line-height: 29px;
+    font-size: 14px;
+    top: 113px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 16px;
+    background: #fff;
+    border-radius: 3px;
+    color: #222;
+    text-align: center;
+    z-index: 10;
+}
+.cjonCont li a .thum span{
+    background: url(../images24/ico_out_link04.png) no-repeat right center;
+    padding-right: 20px;
+}
+.cjonCont li:hover a .thum{
+    display: block;
+}
+/* alliance_wrap */
+.alliance_wrap{
+    padding: 70px 0 80px;
+    background: #fff;  
+    position: relative;
+}
+.alliance_wrap a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.alliance_wrap h4{
+    height: 88px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 45px;
+    font-weight: 700;
+}
+.alliance_wrap .tab{
+    height: 24px;
+    padding-top: 30px;
+    text-align: center;
+    line-height: 24px;
+}
+.alliance_wrap .tab li,
+.alliance_wrap .tab li a{
+    display: inline;
+}
+.alliance_wrap .tab li a{
+    font-size: 16px;
+    color: #888;
+    line-height: 16px;
+}
+.alliance_wrap .tab li a:hover{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.alliance_wrap .tab li.on>a{
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+.alliance_wrap .tab li:nth-child(n){
+    margin-left: 12px;
+    padding-left: 14px;
+    border-left: 1px solid #eaeaea;
+}
+.alliance_wrap .tab li:first-child{
+    border-left: none;
+}
+.alliance_list{
+    width: 1060px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+.alliance_list li{
+    float: left;
+    width: 176px;
+    height: 80px;
+    position: relative;
+}
+.alliance_list li.on>a{
+    display: block;
+    border: 1px solid orange;
+}
+.alliance_list li>a{
+    padding-top: 19px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.alliance_list li .event{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 16px;
+    background-color: #ee6900;
+    z-index: 1;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+}
+.alliance_list li img{
+    display: block;
+    height: 41px;
+    margin: auto;
+}
+.alliance_list li .info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 176px;
+    height: 80px;
+    background: #f2f2f2;
+    z-index: -1;
+    text-align: center;
+    display: none;
+}
+.alliance_list li.on .info{
+    display: block;
+    left: 176px;
+    z-index: 3;
+}
+.alliance_list li.pc.on .info{
+    left: -176px;
+    z-index: 3;
+    display: block;
+}
+.alliance_list li .info p{
+    display: table-cell;
+    /* vertical-align을 사용하기 위해 */
+    width: 156px;
+    height: 80px;
+    padding: 0 10px;
+    vertical-align: middle;
+    line-height: 25px;
+}
+/* vertical-align=> inline, inline-block, table에만 사용할수 있다. */
+.alliance_list li .info .ico{
+    position: absolute;
+    width: 10px;
+    height: 16px;
+    background: url(../images24/ico_alliance_arrow01.png) no-repeat;
+    top: 50%;
+    left: -1px;
+    transform: translateY(-50%);
+}
+.alliance_list li.pc .info .ico{
+    background-image: url(../images24/ico_alliance_arrow.png);
+    right: -1px;
+    left: auto;
+}
