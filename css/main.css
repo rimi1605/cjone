@@ -160,16 +160,16 @@ article .visual .arrow a.next{
     width: 150px;
     height: 130px;
     margin: 0 auto;
-    background: url(../images24/quick01_00019.png) no-repeat left top;
+    background: url(../images24/quick01.png) no-repeat left top;
 }
 .quick_list:nth-child(2) .ani{
-    background-image: url(../images24/quick02_00019.png);
+    background-image: url(../images24/quick02.png);
 }
 .quick_list:nth-child(3) .ani{
-    background-image: url(../images24/quick03_00019.png);
+    background-image: url(../images24/quick03.png);
 }
 .quick_list:nth-child(4) .ani{
-    background-image: url(../images24/quick04_00019.png);
+    background-image: url(../images24/quick04.png);
 }
 .quick_list dt{
     font-size: 18px;
